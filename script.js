@@ -13,6 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
     { name:'Kaolin Clay', formula:'Al₂Si₂O₅(OH)₄', img:'images/minerals/kaolin-clay.png', desc:'Soft white clay with fine particle size. Used in paper, ceramics, paints, and rubber.', tags:['Paper','Ceramics','Paint'] },
   ];
 
+  // ===== HERO SLIDER =====
+  const slides = document.querySelectorAll('.hero-slide');
+  let currentSlide = 0;
+  if (slides.length > 0) {
+    setInterval(() => {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+    }, 5000);
+  }
+
   // ===== RENDER FLIP CARDS =====
   const g = document.getElementById('prodGrid');
   if (g) {
