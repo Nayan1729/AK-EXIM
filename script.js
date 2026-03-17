@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===== LEAFLET MAP =====
   const mapEl = document.getElementById('leafletMap');
   if (mapEl && typeof L !== 'undefined') {
-    // Origin: Gujarat, India
+    // Origin: Gandhidham, Kutch, India
     const origin = [22.3, 72.6];
 
     const map = L.map('leafletMap', {
